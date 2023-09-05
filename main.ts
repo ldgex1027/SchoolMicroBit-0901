@@ -14,7 +14,8 @@ radio.onReceivedNumber(function (receivedNumber) {
             . . # . .
             . . # . .
             `)
-        DFRobotMaqueenPlus.mototRun(Motors.ALL, Dir.CW, 50)
+        DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CW, 50)
+        DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 70)
     } else if (receivedNumber == 2) {
         basic.showLeds(`
             . . # . .
@@ -23,7 +24,8 @@ radio.onReceivedNumber(function (receivedNumber) {
             . # # # .
             . . # . .
             `)
-        DFRobotMaqueenPlus.mototRun(Motors.ALL, Dir.CCW, 50)
+        DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CCW, 50)
+        DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CCW, 70)
     } else if (receivedNumber == 3) {
         basic.showLeds(`
             . . # . .
@@ -32,7 +34,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             . # . . .
             . . # . .
             `)
-        DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 50)
+        DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 35)
     } else if (receivedNumber == 4) {
         basic.showLeds(`
             . . # . .
@@ -41,7 +43,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             . . . # .
             . . # . .
             `)
-        DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CW, 50)
+        DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CW, 35)
     } else {
         basic.showLeds(`
             . # . # .

@@ -6,7 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "MaqueenPlus": "github:dfrobot/pxt-dfrobot-maqueenplus#v1.5.1",
-        "audio-recording": "*"
+        "audio-recording": "*",
+        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.5"
     },
     "files": [
         "main.blocks",
