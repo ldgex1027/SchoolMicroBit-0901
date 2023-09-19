@@ -15,7 +15,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             . . # . .
             `)
         DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CW, 50)
-        DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 70)
+        DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, randint(0, 1))
     } else if (receivedNumber == 2) {
         basic.showLeds(`
             . . # . .
@@ -57,10 +57,21 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 let blinkLED = 0
+serial.redirectToUSB()
 DFRobotMaqueenPlus.I2CInit()
 radio.setGroup(19)
 DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBA, Color.PINK)
-basic.showString("WELCOME")
+basic.showString("fu")
+radio.sendString("")
 basic.forever(function () {
-	
+    if (sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    ) <= 10) {
+        DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CW, 80)
+    } else {
+        DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CW, 30)
+        DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 50)
+    }
 })
